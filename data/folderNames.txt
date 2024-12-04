@@ -1,0 +1,6 @@
+Marketing
+Engineering
+HumanRessources
+Finance
+Managerment
+Testing
