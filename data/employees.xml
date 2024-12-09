@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<company>
+    <name>Chivi Tech</name>
+    <location>
+        <city>Hanoi</city>
+        <country>Vietnam</country>
+    </location>
+    <employees>
+        <employee>
+            <id>1</id>
+            <name>John Doe</name>
+            <position>Software Engineer</position>
+        </employee>
+        <employee>
+            <id>2</id>
+            <name>Jane Smith</name>
+            <position>Software Engineer</position>
+        </employee>
+        <employee>
+            <id>3</id>
+            <name>Ohit Smith</name>
+            <position>Project Manager</position>
+        </employee>
+        <employee>
+            <id>4</id>
+            <name>Jane Foor</name>
+            <position>Tester</position>
+        </employee>
+        <employee>
+            <id>5</id>
+            <name>Bob Bin</name>
+            <position>Software Engineer</position>
+        </employee>
+    </employees>
+</company>

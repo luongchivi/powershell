@@ -1,0 +1,6 @@
+"id","name","position","department","email","salary"
+"1","John Doe","Software Engineer","IT","johndoe@example.com","75000"
+"2","Jane Smith","Project Manager","Operations","janesmith@example.com","90000"
+"3","Alice Johnson","HR Specialist","Human Resources","alicejohnson@example.com","60000"
+"4","Bob Williams","Data Analyst","Business Intelligence","bobwilliams@example.com","70000"
+"5","Emma Brown","Marketing Coordinator","Marketing","emmabrown@example.com","65000"

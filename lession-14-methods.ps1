@@ -1,16 +1,16 @@
 function Create-Configuration {
     [CmdletBinding()]
     param(
-        [Parameter(Mandatory, ValueFromPipeline)]
+        [Parameter(Mandatory, ValueFromPipeline, ValueFromPipelineByPropertyName)]
         [string]$Name,
 
-        [Parameter()]
+        [Parameter(ValueFromPipelineByPropertyName)]
         [string]$Version = "1.0.0",
 
         [Parameter(Mandatory)]
         [string]$Path,
 
-        [Parameter()]
+        [Parameter(ValueFromPipelineByPropertyName)]
         [ValidateSet("Linux", "Windows")]
         [string]$OperatingSystem = "Windows"
     )
@@ -64,10 +64,32 @@ function Create-Configuration {
 $configPath = "C:\Users\chivi\OneDrive\Desktop\powershell\config"
 
 # Tạo cấu hình cho testConfig0
-Create-Configuration -Name "testConfig0" -Version "3.0.1" -Path $configPath -OperatingSystem "Windows"
+Create-Configuration -Name "TestConfig0" -Version "3.0.1" -Path $configPath -OperatingSystem "Windows"
 
-# Tạo cấu hình cho nhiều tệp với pipeline
+# # Tạo cấu hình cho nhiều tệp với pipeline
 $Names = @("TestConfig1", "TestConfig2", "TestConfig3", "TestConfig4")
 $Names | Create-Configuration -Path $configPath
 
 $PSVersionTable.PSVersion
+
+# create file with create new custom object
+$IISServer = New-Object -TypeName pscustomobject
+Add-Member -InputObject $IISServer -MemberType NoteProperty -Name "Name" -Value "IISServer2022"
+Add-Member -InputObject $IISServer -MemberType NoteProperty -Name "Version" -Value "1.0.3"
+Add-Member -InputObject $IISServer -MemberType NoteProperty -Name "OperatingSystem" -Value "Windows"
+$IISServer | Create-Configuration -Path $configPath
+
+
+# create file with casting custom object
+$Test = [pscustomobject]@{
+    Name = "Test"
+    Version = "1.0.3"
+    OperatingSystem = "Windows"
+}
+$Test | Create-Configuration -Path $configPath
+
+
+# create list of files config with csv file
+$csvPath = "C:\Users\chivi\OneDrive\Desktop\powershell\config\servers.csv"
+$Servers = Import-Csv -Path $csvPath -Delimiter ','
+$Servers | Create-Configuration -Path $configPath 

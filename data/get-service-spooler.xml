@@ -1,0 +1,174 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>System.Service.ServiceController#StartupType</T>
+      <T>System.Service.ServiceController#BinaryPathName</T>
+      <T>System.Service.ServiceController#DelayedAutoStart</T>
+      <T>System.Service.ServiceController#Description</T>
+      <T>System.Service.ServiceController#UserName</T>
+      <T>System.ServiceProcess.ServiceController</T>
+      <T>System.ComponentModel.Component</T>
+      <T>System.MarshalByRefObject</T>
+      <T>System.Object</T>
+    </TN>
+    <ToString>Spooler</ToString>
+    <Props>
+      <B N="CanPauseAndContinue">false</B>
+      <B N="CanShutdown">false</B>
+      <B N="CanStop">true</B>
+      <S N="DisplayName">Print Spooler</S>
+      <Obj N="DependentServices" RefId="1">
+        <TN RefId="1">
+          <T>System.ServiceProcess.ServiceController[]</T>
+          <T>System.Array</T>
+          <T>System.Object</T>
+        </TN>
+        <LST />
+      </Obj>
+      <S N="MachineName">.</S>
+      <S N="ServiceName">Spooler</S>
+      <Obj N="ServicesDependedOn" RefId="2">
+        <TNRef RefId="1" />
+        <LST>
+          <Obj RefId="3">
+            <TN RefId="2">
+              <T>System.ServiceProcess.ServiceController</T>
+              <T>System.ComponentModel.Component</T>
+              <T>System.MarshalByRefObject</T>
+              <T>System.Object</T>
+            </TN>
+            <ToString>RPCSS</ToString>
+            <Props>
+              <B N="CanPauseAndContinue">false</B>
+              <B N="CanShutdown">false</B>
+              <B N="CanStop">false</B>
+              <S N="DisplayName">Remote Procedure Call (RPC)</S>
+              <S N="MachineName">.</S>
+              <S N="ServiceName">RPCSS</S>
+              <Obj N="ServicesDependedOn" RefId="4">
+                <TNRef RefId="1" />
+                <LST>
+                  <S>RpcEptMapper</S>
+                  <S>DcomLaunch</S>
+                </LST>
+              </Obj>
+              <S N="StartType">Automatic</S>
+              <S N="Status">Running</S>
+              <S N="ServiceType">Win32ShareProcess</S>
+              <Nil N="Site" />
+              <Nil N="Container" />
+            </Props>
+            <MS>
+              <S N="Name">RPCSS</S>
+              <Ref N="RequiredServices" RefId="4" />
+            </MS>
+          </Obj>
+          <Obj RefId="5">
+            <TNRef RefId="2" />
+            <ToString>http</ToString>
+            <Props>
+              <B N="CanPauseAndContinue">false</B>
+              <B N="CanShutdown">false</B>
+              <B N="CanStop">true</B>
+              <S N="DisplayName">HTTP Service</S>
+              <Obj N="DependentServices" RefId="6">
+                <TNRef RefId="1" />
+                <LST>
+                  <S>WMPNetworkSvc</S>
+                  <S>WinRM</S>
+                  <S>Wecsvc</S>
+                  <S>upnphost</S>
+                  <S>SSDPSRV</S>
+                  <S>Spooler</S>
+                  <S>RemoteAccess</S>
+                  <S>PeerDistSvc</S>
+                  <S>FDResPub</S>
+                  <S>fdPHost</S>
+                </LST>
+              </Obj>
+              <S N="MachineName">.</S>
+              <S N="ServiceName">http</S>
+              <Obj N="ServicesDependedOn" RefId="7">
+                <TNRef RefId="1" />
+                <LST />
+              </Obj>
+              <S N="StartType">Manual</S>
+              <S N="ServiceHandle">Microsoft.Win32.SafeHandles.SafeServiceHandle</S>
+              <S N="Status">Running</S>
+              <S N="ServiceType">KernelDriver</S>
+              <Nil N="Site" />
+              <Nil N="Container" />
+            </Props>
+            <MS>
+              <S N="Name">http</S>
+              <Ref N="RequiredServices" RefId="7" />
+            </MS>
+          </Obj>
+        </LST>
+      </Obj>
+      <Obj N="StartType" RefId="8">
+        <TN RefId="3">
+          <T>System.ServiceProcess.ServiceStartMode</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Automatic</ToString>
+        <I32>2</I32>
+      </Obj>
+      <Obj N="ServiceHandle" RefId="9">
+        <TN RefId="4">
+          <T>Microsoft.Win32.SafeHandles.SafeServiceHandle</T>
+          <T>System.Runtime.InteropServices.SafeHandle</T>
+          <T>System.Runtime.ConstrainedExecution.CriticalFinalizerObject</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Microsoft.Win32.SafeHandles.SafeServiceHandle</ToString>
+        <Props>
+          <B N="IsInvalid">false</B>
+          <B N="IsClosed">false</B>
+        </Props>
+      </Obj>
+      <Obj N="Status" RefId="10">
+        <TN RefId="5">
+          <T>System.ServiceProcess.ServiceControllerStatus</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Running</ToString>
+        <I32>4</I32>
+      </Obj>
+      <Obj N="ServiceType" RefId="11">
+        <TN RefId="6">
+          <T>System.ServiceProcess.ServiceType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Win32OwnProcess, InteractiveProcess</ToString>
+        <I32>272</I32>
+      </Obj>
+      <Nil N="Site" />
+      <Nil N="Container" />
+    </Props>
+    <MS>
+      <S N="UserName">LocalSystem</S>
+      <S N="Description">This service spools print jobs and handles interaction with the printer.  If you turn off this service, you won't be able to print or see your printers.</S>
+      <B N="DelayedAutoStart">false</B>
+      <S N="BinaryPathName">C:\WINDOWS\System32\spoolsv.exe</S>
+      <Obj N="StartupType" RefId="12">
+        <TN RefId="7">
+          <T>Microsoft.PowerShell.Commands.ServiceStartupType</T>
+          <T>System.Enum</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+        </TN>
+        <ToString>Automatic</ToString>
+        <I32>2</I32>
+      </Obj>
+      <S N="Name">Spooler</S>
+      <Ref N="RequiredServices" RefId="2" />
+    </MS>
+  </Obj>
+</Objs>

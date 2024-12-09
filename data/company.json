@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "McCullough - Brakus",
+    "address": "4229 Larson Camp",
+    "zip": "47050",
+    "country": "Zambia",
+    "employeeCount": 6001,
+    "industry": "Technology",
+    "marketCap": 3054067111,
+    "domain": "dramatic-impostor.name",
+    "logo": "https://example.com/logo1.png",
+    "ceoName": "Saul Rodriguez",
+    "createdAt": "12-09-2024 12:07"
+  },
+  {
+    "id": 4,
+    "name": "Deckow Inc",
+    "address": "40146 Crown Street",
+    "zip": "05642-8581",
+    "country": "Montenegro",
+    "employeeCount": 8984,
+    "industry": "Technology",
+    "marketCap": 9942205089,
+    "domain": "familiar-bedrock.name",
+    "logo": "https://example.com/logo1.png",
+    "ceoName": "Barney Ferry",
+    "createdAt": "12-09-2024 12:07"
+  },
+  {
+    "id": 8,
+    "name": "Borer, Treutel and Rau",
+    "address": "9991 Leannon Forks",
+    "zip": "05821",
+    "country": "British Indian Ocean Territory (Chagos Archipelago)",
+    "employeeCount": 5335,
+    "industry": "Technology",
+    "marketCap": 3420060150,
+    "domain": "grumpy-infinite.org",
+    "logo": "https://example.com/logo1.png",
+    "ceoName": "Sandra Thiel-Ondricka",
+    "createdAt": "12-09-2024 12:07"
+  },
+  {
+    "id": 9,
+    "name": "Kulas, Swift and Abshire",
+    "address": "4865 Mulberry Street",
+    "zip": "32019",
+    "country": "Cyprus",
+    "employeeCount": 7666,
+    "industry": "Technology",
+    "marketCap": 5107479790,
+    "domain": "short-ephemera.biz",
+    "logo": "https://example.com/logo1.png",
+    "ceoName": "Jaime Klein",
+    "createdAt": "12-09-2024 12:07"
+  }
+]
